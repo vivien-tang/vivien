@@ -19,8 +19,8 @@ def login_action(request):
         else:
             # return HttpResponse('login fail:username and password error')
             return render(request,'index.html', {'error':'username and password error'})
-# @login_required
-# def event_manage(request):
-#     # username = request.COOKIES.get('user','') #读取浏览器cookie信息
-#     username = request.session.get('user','') #读取浏览器session信息
-#     return render(request, 'event_manage.html',{'user':username})
+@login_required
+def event_manage(request):
+    # username = request.COOKIES.get('user','') #读取浏览器cookie信息
+    username = request.session.get('user','') #读取浏览器session信息
+    return render(request, 'event_manage.html',{'user':username})
