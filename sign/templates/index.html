@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Django Page</title>
+    </head>
+    <body>
+        <h2>发布会管理系统</h2>
+            <form method="post" action="/login_action/">
+                <input name="username" type="text" placeholder="用户名"><br>
+                <br>
+                <input name="password" type="text" placeholder="密码"><br>
+                {{error}}<br>
+                <button id="btn" type="submit">登录</button>
+            </form>
+    </body>
+</html>
